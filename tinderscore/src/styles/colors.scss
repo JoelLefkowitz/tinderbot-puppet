@@ -1,0 +1,16 @@
+@import 'palettes';
+@import '~@angular/material/theming';
+
+$primary: mat-color($primary-palette, 500);
+$secondary: mat-color($secondary-palette, 500);
+
+$dark-primary: mat-color($dark-primary-palette, 500);
+$dark-secondary: mat-color($dark-secondary-palette, 500);
+
+$warn: #f44336;
+
+$light-foreground: #fafafa;
+$light-background: #e4e4e4;
+
+$dark-foreground: #424242;
+$dark-background: #343434;
