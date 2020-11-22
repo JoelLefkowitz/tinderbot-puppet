@@ -1,16 +1,16 @@
-const { dest, series, task } = require("gulp");
+const { dest, src, task } = require("gulp");
 const ts = require("gulp-typescript");
-const ConsoleProcess = require("./utils/processes.js");
+const tslint = require("gulp-tslint");
+const uglify = require("gulp-uglify");
 
-task("build", async () => {
-	ts.createProject("tsconfig.json").src().pipe(ts()).pipe(dest("dist/"));
-});
+async function build() {
+	const tsProject = ts.createProject("tsconfig.json");
+	await src("src/**/*").pipe(tsProject()).js.pipe(uglify()).pipe(dest("dist/"));
+}
 
-task("autosaveDelay", async () => setTimeout(() => {}, 1000));
+async function lint() {
+	await src("src/**/*").pipe(tslint()).pipe(tslint.report());
+}
 
-task("run", async () => {
-	const process = new ConsoleProcess(["node", "dist/main.js"]);
-	return process.run();
-});
-
-exports.default = series("build", "autosaveDelay", "run");
+task("build", build);
+task("lint", lint);

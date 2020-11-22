@@ -1,24 +1,17 @@
 @import '../../../styles/colors';
 
-.block
-{
-    position: relative;
-
-    width: 100px;
-    height: 100px;
-    margin: 50px auto 0 auto;
-
-    border-radius: 10px;
-    background-color: $dark-background;
+.readings-table {
+    width: 100%;
 }
 
-.tag
-{
-    position: relative;
-    top: 50%;
+.table-container {
+    height: calc(100% - 125px);
+    overflow: scroll;
+}
 
-    transform: translateY(-50%);
-    text-align: center;
-
-    color: white;
+.mat-column-id,
+.mat-column-created,
+.mat-column-firstName,
+.mat-column-lastName {
+    width: 25%;
 }

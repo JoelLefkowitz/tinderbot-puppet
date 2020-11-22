@@ -1,10 +1,10 @@
 import { Match, MatchPayload } from "../models/match.model";
-import { map, tap } from "rxjs/operators";
 
-import { CsrfService } from "./csrf";
+import { HttpHeaders } from "../models/headers.model";
 import { Observable } from "rxjs";
 import { PaginatedList } from "../models/results.model";
 import { RxHR } from "@akanass/rx-http-request";
+import { map } from "rxjs/operators";
 
 export class MatchesService {
 	url = "http://localhost:8000/api/matches/";
@@ -28,14 +28,21 @@ export class MatchesService {
 
 	createMatch(
 		matchPayload: MatchPayload,
-		document: Document
+		csrfToken: string
 	): Observable<Match> {
-		const csrfService = new CsrfService();
 		const options = {
-			headers: csrfService.jsonPostHeaders(document),
-			payload: matchPayload
+			headers: this.postHeaders(csrfToken),
+			body: matchPayload,
+			json: true
 		};
-		return RxHR.post(this.url, options).pipe(map(x => JSON.parse(x.body)));
+		return RxHR.post(this.url, options).pipe(map(x => x.body));
+	}
+
+	postHeaders(csrfToken: string): HttpHeaders {
+		return {
+			"Content-Type": "application/json",
+			"X-CSRFToken": csrfToken
+		};
 	}
 
 	paginationBuilder(limit?: number, offset?: number): string {

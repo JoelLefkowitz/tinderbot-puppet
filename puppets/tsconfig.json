@@ -1,17 +1,22 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,
+        "baseUrl": "./",
         "outDir": "./dist",
+        "sourceMap": true,
+        "allowJs": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
     },
     "include": [
+        "src/bots.ts",
         "src/**/*"
     ],
     "exclude": [
         "node_modules",
-        "**/*.spec.ts"
+        "**/node_modules/*"
     ]
 }
