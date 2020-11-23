@@ -1,0 +1,3 @@
+# Tinderscore
+
+Tindebot logging app

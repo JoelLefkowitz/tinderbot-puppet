@@ -1,3 +1,4 @@
+\__pycache__/
 __pypackages__/
 !.vscode/extensions.json
 !.vscode/launch.json
@@ -11,7 +12,7 @@ __pypackages__/
 .dmypy.json
 .DS_Store
 .eggs/
-*.env
+.env
 .history/*
 .hypothesis/
 .idea/
@@ -48,10 +49,8 @@ __pypackages__/
 *.sage.py
 *.so
 *.spec
-*.sqlite3
 *.sublime-workspace
 *$py.class
-\__pycache__/
 bazel-out/
 build/
 celerybeat-schedule/
@@ -60,6 +59,8 @@ chrome-profiler-events*.json
 connect.lock
 coverage.xml
 coverage/
+db.sqlite3
+db.sqlite3-journal
 develop-eggs/
 dist/
 dmypy.json
@@ -90,7 +91,6 @@ sdist/
 share/python-wheels/
 site/
 speed-measure-plugin*.json
-sqlite3
 target/
 testem.log
 Thumbs.db
@@ -101,3 +101,4 @@ venv.bak/
 venv/
 wheels/
 yarn-error.log
+
