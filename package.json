@@ -1,0 +1,17 @@
+{
+	"name": "tinderbot",
+	"version": "1.0.0",
+	"description": "Puppeteer scritps for tinder",
+	"author": "Joel Lefkowitz",
+	"license": "ISC",
+  "portfolio": {
+    "project_type": "Published on npm",
+    "languages": ["Typescript"],
+    "frameworks": ["Puppeteer"],
+    "paradigms": [
+      "Containerised microservices",
+      "Object oriented programming"
+    ],
+    "status": ["Stable"]
+  }
+}
