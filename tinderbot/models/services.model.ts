@@ -1,3 +1,3 @@
 export interface Service {
-	serviceUrl: string;
+  serviceUrl: string;
 }

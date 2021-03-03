@@ -1,4 +1,4 @@
 export interface Bot {
-	botUrl: string;
-	mainLoop: () => Promise<void>;
+  botUrl: string;
+  mainLoop: () => Promise<void>;
 }

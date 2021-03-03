@@ -1,6 +1,6 @@
 # Tinderbot
 
-Tinder pupeteer scripts and Web UI. This is the parent repo for tinderbot-puppets and the web ui packages.
+Tinder Pupeteer scripts.
 
 ## Status
 
