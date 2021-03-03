@@ -2,24 +2,27 @@
 
 Tinder pupeteer scripts and Web UI. This is the parent repo for tinderbot-puppets and the web ui packages.
 
-## Usage
+## Status
 
-![Example usage][example_gif]
+| Source     | Shields                                                                                                            |
+| ---------- | ------------------------------------------------------------------------------------------------------------------ |
+| Project    | ![release][release_shield] ![license][license_shield] ![dependents][dependents_shield]                             |
+| Health     | ![travis][travis_shield] ![codacy][codacy_shield] ![coverage][coverage_shield] ![readthedocs][readthedocs_shield]  |
+| Repository | ![issues][issues_shield] ![pulls][pulls_shield]                                                                    |
+| Publishers | ![npm][npm_shield] ![npm_downloads][npm_downloads_shield]                                                          |
+| Activity   | ![contributors][contributors_shield] ![monthly_commits][monthly_commits_shield] ![last_commit][last_commit_shield] |
 
-### Status
+## Example
 
-| Source     | Shields                                                        |
-| ---------- | -------------------------------------------------------------- |
-| Project    | ![license][license] ![release][release]                        |
-| Publishers | [![npm][npm]][npm_link]                                        |
-| Downloads  | ![npm_downloads][npm_downloads]                                |
-| Raised     | [![issues][issues]][issues_link] [![pulls][pulls]][pulls_link] |
+![Example usage][example]
 
-### Installing with npm
+## Installation
 
 ```bash
 npm install -g tinderbot-puppet
 ```
+
+## Usage
 
 Run chrome with an open port and sign in to tinder
 
@@ -65,41 +68,133 @@ The remote host and port are exposed as environment variables
 - remoteHost = 0.0.0.0
 - remoteBrowserPort = 9222
 
-### Docs
+## Tests
 
-Additional details are available in the [full documentation](https://tinderbot.readthedocs.io/en/latest/).
+To run unit tests:
 
-### Contributing
+```bash
+grunt tests:unit
+```
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+To generate a coverage report:
 
-### Versioning
+```bash
+grunt tests:coverage
+```
 
-[SemVer](http://semver.org/) is used for versioning. For a list of versions available, see the tags on this repository. Releases are made on every major change.
+## Documentation
 
-### Author
+This repository's documentation is hosted on [readthedocs][readthedocs].
 
-- **Joel Lefkowitz** - _Initial work_ - [Joel Lefkowitz](https://github.com/JoelLefkowitz)
+To generate the sphinx configuration:
 
-See also the list of contributors who participated in this project.
+```bash
+grunt docs:generate
+```
 
-### License
+Then build the documentation:
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+```bash
+grunt docs:build
+```
 
-### Acknowledgments
+## Tooling
 
-None yet!
+To run linters:
 
-<!--- Table links --->
+```bash
+grunt lint
+```
 
-[license]: https://img.shields.io/github/license/joellefkowitz/tinderbot
-[release]: https://img.shields.io/github/v/tag/joellefkowitz/tinderbot
-[npm_downloads]: https://img.shields.io/npm/dw/tinderbot-puppet
-[npm]: https://img.shields.io/npm/v/tinderbot-puppet "npm"
-[npm_link]: https://npm.org/project/tinderbot-puppet
-[issues]: https://img.shields.io/github/issues/joellefkowitz/tinderbot "Issues"
-[issues_link]: https://github.com/JoelLefkowitz/tinderbot/issues
-[pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/tinderbot "Pull requests"
-[pulls_link]: https://github.com/JoelLefkowitz/tinderbot/pulls
-[example_gif]: https://github.com/JoelLefkowitz/tinderbot/raw/master/example.gif "Example usage"
+To run formatters:
+
+```bash
+grunt format
+```
+
+Before commiting new code:
+
+```bash
+grunt precommit
+```
+
+This will run linters, formaters, generate a test coverage report and the sphinx configuration.
+
+## Versioning
+
+This repository adheres to semantic versioning standards.
+For more inforamtion on semantic versioning visit [SemVer][semver].
+
+Bump2version is used to version and tag changes.
+For example:
+
+```bash
+bump2version patch
+```
+
+## Changelog
+
+Please read this repository's [CHANGELOG](CHANGELOG.md) for details on changes that have been made.
+
+## Contributing
+
+Please read this repository's guidelines on [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## Contributors
+
+- **Joel Lefkowitz** - _Initial work_ - [Joel Lefkowitz][joellefkowitz]
+
+[![Buy Me A Coffee][coffee_button]][coffee]
+
+## Remarks
+
+Lots of love to the open source community!
+
+![Be kind][be_kind]
+
+<!-- Github links -->
+
+[pulls]: https://github.com/JoelLefkowitz/tinderbot/pulls
+[issues]: https://github.com/JoelLefkowitz/tinderbot/issues
+[example]: https://github.com/JoelLefkowitz/tinderbot/raw/master/example.gif
+
+<!-- External links -->
+
+[readthedocs]: https://tinderbot.readthedocs.io/en/latest/
+[semver]: http://semver.org/
+[coffee]: https://www.buymeacoffee.com/joellefkowitz
+[coffee_button]: https://cdn.buymeacoffee.com/buttons/default-blue.png
+[be_kind]: https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif
+
+<!-- Acknowledgments -->
+
+[joellefkowitz]: https://github.com/JoelLefkowitz
+
+<!-- Project shields -->
+
+[release_shield]: https://img.shields.io/github/v/tag/joellefkowitz/tinderbot
+[license_shield]: https://img.shields.io/github/license/joellefkowitz/tinderbot
+[dependents_shield]: https://img.shields.io/librariesio/dependent-repos/pypi/tinderbot-puppet
+
+<!-- Health shields -->
+
+[travis_shield]: https://img.shields.io/travis/joellefkowitz/tinderbot
+[codacy_shield]: https://img.shields.io/codacy/coverage/tinderbot
+[coverage_shield]: https://img.shields.io/codacy/grade/tinderbot
+[readthedocs_shield]: https://img.shields.io/readthedocs/tinderbot
+
+<!-- Repository shields -->
+
+[issues_shield]: https://img.shields.io/github/issues/joellefkowitz/tinderbot
+[pulls_shield]: https://img.shields.io/github/issues-pr/joellefkowitz/tinderbot
+
+<!-- Publishers shields -->
+
+[npm_shield]: https://img.shields.io/npm/v/tinderbot-puppet
+[npm_downloads_shield]: https://img.shields.io/npm/dw/tinderbot-puppet
+
+<!-- Activity shields -->
+
+[contributors_shield]: https://img.shields.io/github/contributors/joellefkowitz/tinderbot
+[monthly_commits_shield]: https://img.shields.io/github/commit-activity/m/joellefkowitz/tinderbot
+[last_commit_shield]: https://img.shields.io/github/last-commit/joellefkowitz/tinderbot

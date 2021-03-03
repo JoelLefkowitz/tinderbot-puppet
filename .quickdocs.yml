@@ -1,0 +1,6 @@
+project: tinderbot
+version: 1.0.0
+author: Joel Lefkowitz
+verbose_name: Tinderbot
+html_title: Tinderbot
+github_url: JoelLefkowitz/tinderbot

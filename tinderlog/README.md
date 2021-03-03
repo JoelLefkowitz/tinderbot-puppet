@@ -1,3 +1,0 @@
-# Tinderlog
-
-Tindebot logging server

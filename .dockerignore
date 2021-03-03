@@ -1,0 +1,14 @@
+!README.md
+.*
+*.md
+**/.DS_Store
+**/.git
+**/*.env
+**/*docker-compose.yml
+**/coverage
+**/docs
+**/node_modules
+**/sqlite3
+**/terraform
+**/test*
+**/venv
