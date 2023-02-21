@@ -41,32 +41,20 @@ tinderbot
 ### Extending locally
 
 ```bash
-git clone https://github.com/joellefkowitz/tinderbot
+git clone https://github.com/joellefkowitz/tinderbot-puppet
 ```
 
-Compile the package
+Compile the package:
 
 ```bash
 npm run build
 ```
 
-An entrypoint is exposed in run.js
+Run the entrypoint:
 
 ```bash
-node dist/run.js
+node dist/main.js
 ```
-
-### Running with docker
-
-```bash
-docker pull joellefkowitz/tinderbot
-docker run -it --rm -p 9222:9222 tinderbot
-```
-
-The remote host and port are exposed as environment variables
-
-- remoteHost = 0.0.0.0
-- remoteBrowserPort = 9222
 
 ## Tests
 
