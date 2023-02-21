@@ -1,0 +1,7 @@
+.github/
+.husky/
+*.json
+*.md
+*.yml
+docs/
+yarn.lock

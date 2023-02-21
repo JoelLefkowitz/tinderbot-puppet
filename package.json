@@ -1,24 +1,55 @@
 {
   "name": "tinderbot-puppet",
-  "version": "1.0.0",
   "description": "Tinder Pupeteer scripts.",
-  "license": "MIT",
+  "version": "1.0.0",
+  "repository": "https://github.com/joellefkowitz/tinderbot-puppet",
+  "homepage": "https://tinderbot-puppet.readthedocs.io",
   "author": "Joel Lefkowitz",
-  "portfolio": {
-    "project_type": "Npm package",
-    "homepage": "https://tinderbot.readthedocs.io",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@akanass/rx-http-request": "^3.3.0",
+    "puppeteer": "^19.7.2",
+    "rxjs": "^7.8.0",
+    "tsyringe": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/jest": "28.1.1",
+    "@types/node": "^18.11.18",
+    "@types/puppeteer": "^7.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.36.1",
+    "cspell": "^6.26.3",
+    "eslint": "~8.34.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "jest": "28.1.1",
+    "nps": "^5.10.0",
+    "nps-utils": "^1.7.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "28.0.5",
+    "ts-node": "10.9.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.8.4"
+  },
+  "metadata": {
+    "documentation": "https://tinderbot-puppet.readthedocs.io",
+    "packages": "https://npmjs.com/package/tinderbot-puppet",
     "languages": [
       "TypeScript"
     ],
-    "frameworks": [
-      "Puppeteer"
-    ],
+    "frameworks": [],
     "paradigms": [
-      "Containerised microservices",
-      "Object oriented programming"
+      "Event driven"
     ],
-    "status": [
-      "Stable"
-    ]
+    "lifecycle": "Planning",
+    "publisher": "npm"
   }
 }

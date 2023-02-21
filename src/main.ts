@@ -1,8 +1,9 @@
-import { Swiper } from "./bots/swiper";
 import "reflect-metadata";
+
+import { Swiper } from "./bots/swiper";
 import { container } from "tsyringe";
 
-export async function main() {
+(async () => {
   const swiper = container.resolve(Swiper);
-  await swiper.mainLoop();
-}
+  await swiper.loop();
+})();

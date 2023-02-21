@@ -1,6 +1,6 @@
-project: tinderbot
+project: tinderbot-puppet
 version: 1.0.0
 author: Joel Lefkowitz
-verbose_name: Tinderbot
-html_title: Tinderbot
-github_url: JoelLefkowitz/tinderbot
+verbose_name: Tinderbot puppet
+html_title: Tinderbot puppet
+github_url: https://github.com/joellefkowitz/tinderbot-puppet

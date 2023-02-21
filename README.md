@@ -1,16 +1,16 @@
-# Tinderbot
+# Tinderbot puppet
 
 Tinder Pupeteer scripts.
 
 ## Status
 
-| Source     | Shields                                                                                                            |
-| ---------- | ------------------------------------------------------------------------------------------------------------------ |
-| Project    | ![release][release_shield] ![license][license_shield] ![dependents][dependents_shield]                             |
-| Health     | ![travis][travis_shield] ![codacy][codacy_shield] ![coverage][coverage_shield] ![readthedocs][readthedocs_shield]  |
-| Repository | ![issues][issues_shield] ![pulls][pulls_shield]                                                                    |
-| Publishers | ![npm][npm_shield] ![npm_downloads][npm_downloads_shield]                                                          |
-| Activity   | ![contributors][contributors_shield] ![monthly_commits][monthly_commits_shield] ![last_commit][last_commit_shield] |
+| Source     | Shields                                                                |
+| ---------- | ---------------------------------------------------------------------- |
+| Project    | ![latest_release] ![license] ![line_count] ![language_count]           |
+| Health     | ![documentation] ![review_action] ![codacy_quality] ![codacy_coverage] |
+| Publishers | ![npm_version] ![npm_downloads]                                        |
+| Repository | ![open_issues] ![closed_issues] ![open_pulls] ![closed_pulls]          |
+| Activity   | ![contributors] ![monthly_commits] ![last_commit]                      |
 
 ## Example
 
@@ -41,7 +41,7 @@ tinderbot
 ### Extending locally
 
 ```bash
-git clone https://github.com/JoelLefkowitz/tinderbot
+git clone https://github.com/joellefkowitz/tinderbot
 ```
 
 Compile the package
@@ -70,63 +70,47 @@ The remote host and port are exposed as environment variables
 
 ## Tests
 
-To run unit tests:
+To run tests:
 
 ```bash
-grunt tests:unit
-```
-
-To generate a coverage report:
-
-```bash
-grunt tests:coverage
+nps test
 ```
 
 ## Documentation
 
-This repository's documentation is hosted on [readthedocs][readthedocs].
+This repository's documentation is hosted on [Read the Docs](https://tinderbot-puppet.readthedocs.io/en/latest).
 
-To generate the sphinx configuration:
-
-```bash
-grunt docs:generate
-```
-
-Then build the documentation:
+To generate the documentation locally:
 
 ```bash
-grunt docs:build
+quickdocs
 ```
 
-## Tooling
+## Linters
 
 To run linters:
 
 ```bash
-grunt lint
+nps lint
 ```
+
+## Formatters
 
 To run formatters:
 
 ```bash
-grunt format
+nps format
 ```
 
-Before commiting new code:
+## Continuous integration
 
-```bash
-grunt precommit
-```
-
-This will run linters, formaters, generate a test coverage report and the sphinx configuration.
+This repository uses GitHub Actions to lint and test each commit. Each commit should be formatted and its corresponding documentation should be updated.
 
 ## Versioning
 
-This repository adheres to semantic versioning standards.
-For more inforamtion on semantic versioning visit [SemVer][semver].
+This repository adheres to semantic versioning standards. For more information on semantic versioning visit [semver](https://semver.org).
 
-Bump2version is used to version and tag changes.
-For example:
+Bump2version is used to version and tag changes. For example:
 
 ```bash
 bump2version patch
@@ -134,67 +118,40 @@ bump2version patch
 
 ## Changelog
 
-Please read this repository's [CHANGELOG](CHANGELOG.md) for details on changes that have been made.
+Please read this repository's [changelog](CHANGELOG.md) for details on changes that have been made.
 
 ## Contributing
 
-Please read this repository's guidelines on [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+Please read this repository's guidelines on [contributing](CONTRIBUTING.md) for details on the process for submitting pull requests. Moreover, our [code of conduct](CODE_OF_CONDUCT.md) declares our collaboration standards.
 
 ## Contributors
 
-- **Joel Lefkowitz** - _Initial work_ - [Joel Lefkowitz][joellefkowitz]
-
-[![Buy Me A Coffee][coffee_button]][coffee]
+- [Joel Lefkowitz](https://github.com/joellefkowitz) - Initial work
 
 ## Remarks
 
 Lots of love to the open source community!
 
-![Be kind][be_kind]
+<p align='center'>
+    <img width=200 height=200 src='https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif' alt='Be kind to your mind' />
+    <img width=200 height=200 src='https://media.giphy.com/media/KEAAbQ5clGWJwuJuZB/giphy.gif' alt='Love each other' />
+    <img width=200 height=200 src='https://media.giphy.com/media/WRWykrFkxJA6JJuTvc/giphy.gif' alt="It's ok to have a bad day" />
+</p>
 
-<!-- Github links -->
-
-[pulls]: https://github.com/JoelLefkowitz/tinderbot/pulls
-[issues]: https://github.com/JoelLefkowitz/tinderbot/issues
-[example]: https://github.com/JoelLefkowitz/tinderbot/raw/master/example.gif
-
-<!-- External links -->
-
-[readthedocs]: https://tinderbot.readthedocs.io/en/latest/
-[semver]: http://semver.org/
-[coffee]: https://www.buymeacoffee.com/joellefkowitz
-[coffee_button]: https://cdn.buymeacoffee.com/buttons/default-blue.png
-[be_kind]: https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif
-
-<!-- Acknowledgments -->
-
-[joellefkowitz]: https://github.com/JoelLefkowitz
-
-<!-- Project shields -->
-
-[release_shield]: https://img.shields.io/github/v/tag/joellefkowitz/tinderbot
-[license_shield]: https://img.shields.io/github/license/joellefkowitz/tinderbot
-[dependents_shield]: https://img.shields.io/librariesio/dependent-repos/pypi/tinderbot-puppet
-
-<!-- Health shields -->
-
-[travis_shield]: https://img.shields.io/travis/joellefkowitz/tinderbot
-[codacy_shield]: https://img.shields.io/codacy/coverage/tinderbot
-[coverage_shield]: https://img.shields.io/codacy/grade/tinderbot
-[readthedocs_shield]: https://img.shields.io/readthedocs/tinderbot
-
-<!-- Repository shields -->
-
-[issues_shield]: https://img.shields.io/github/issues/joellefkowitz/tinderbot
-[pulls_shield]: https://img.shields.io/github/issues-pr/joellefkowitz/tinderbot
-
-<!-- Publishers shields -->
-
-[npm_shield]: https://img.shields.io/npm/v/tinderbot-puppet
-[npm_downloads_shield]: https://img.shields.io/npm/dw/tinderbot-puppet
-
-<!-- Activity shields -->
-
-[contributors_shield]: https://img.shields.io/github/contributors/joellefkowitz/tinderbot
-[monthly_commits_shield]: https://img.shields.io/github/commit-activity/m/joellefkowitz/tinderbot
-[last_commit_shield]: https://img.shields.io/github/last-commit/joellefkowitz/tinderbot
+[latest_release]: https://img.shields.io/github/v/tag/joellefkowitz/tinderbot-puppet "Latest release"
+[license]: https://img.shields.io/github/license/joellefkowitz/tinderbot-puppet "License"
+[line_count]: https://img.shields.io/tokei/lines/github/joellefkowitz/tinderbot-puppet "Line count"
+[language_count]: https://img.shields.io/github/languages/count/joellefkowitz/tinderbot-puppet "Language count"
+[documentation]: https://img.shields.io/readthedocs/tinderbot-puppet "Documentation"
+[review_action]: https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/tinderbot-puppet/review.yml "Review action"
+[codacy_quality]: https://img.shields.io/codacy/grade/a73118d332724935930464a45c9da3cc "Codacy quality"
+[codacy_coverage]: https://img.shields.io/codacy/coverage/a73118d332724935930464a45c9da3cc "Codacy coverage"
+[npm_version]: https://img.shields.io/npm/v/tinderbot-puppet "NPM Version"
+[npm_downloads]: https://img.shields.io/npm/dw/tinderbot-puppet "NPM Downloads"
+[open_issues]: https://img.shields.io/github/issues/joellefkowitz/tinderbot-puppet "Open issues"
+[closed_issues]: https://img.shields.io/github/issues-closed/joellefkowitz/tinderbot-puppet "Closed issues"
+[open_pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/tinderbot-puppet "Open pull requests"
+[closed_pulls]: https://img.shields.io/github/issues-pr-closed/joellefkowitz/tinderbot-puppet "Closed pull requests"
+[contributors]: https://img.shields.io/github/contributors/joellefkowitz/tinderbot-puppet "Contributors"
+[monthly_commits]: https://img.shields.io/github/commit-activity/m/joellefkowitz/tinderbot-puppet "Monthly commits"
+[last_commit]: https://img.shields.io/github/last-commit/joellefkowitz/tinderbot-puppet "Last commit"

@@ -10,5 +10,5 @@
 **/node_modules
 **/sqlite3
 **/terraform
-**/test*
+**/tests
 **/venv

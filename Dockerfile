@@ -1,13 +1,11 @@
-FROM node:14.9
+FROM node:18.11.0-buster
+WORKDIR /build
 
-# Build dependencies first for caching
-WORKDIR /tinderbot
-COPY ./package.json package.json
-RUN npm i
-ENV PATH /tinderbot/node_modules/.bin:$PATH
+COPY package.json .
+RUN yarn install
 
-# Build application
 COPY . .
-RUN npm run build
+RUN nps build
 
+RUN npm prune --production
 CMD ["node", "dist/main.js"]

@@ -1,7 +1,7 @@
-Tinderbot
+Tinderbot puppet
 ============
 
-Welcome to Tinderbot's documentation!
+Welcome to Tinderbot puppet's documentation!
 
 .. raw:: html
    :file: README.html
