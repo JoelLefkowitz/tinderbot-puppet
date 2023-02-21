@@ -5,6 +5,7 @@ import { PaginatedList } from "../models/paginated.model";
 import { RxHR } from "@akanass/rx-http-request";
 import { injectable } from "tsyringe";
 import { map } from "rxjs/operators";
+import { paginate } from "./pagination";
 
 @injectable()
 export class MatchesService {
@@ -14,22 +15,6 @@ export class MatchesService {
     const host = process.env.remoteHost ?? "0.0.0.0";
     const port = process.env.remoteServerPort ?? "8000";
     this.url = `http://${host}:${port}/api/matches"`;
-  }
-
-  protected static paginate(limit?: number, offset?: number): string {
-    if (limit && offset) {
-      return `?limit=${limit}&offset=${offset}`;
-    }
-
-    if (limit) {
-      return `?limit=${limit}`;
-    }
-
-    if (offset) {
-      return `?offset=${offset}`;
-    }
-
-    return "";
   }
 
   count(): Observable<number> {
@@ -43,7 +28,7 @@ export class MatchesService {
 
   list(limit?: number, offset?: number): Observable<Match[]> {
     return RxHR.get<string>(
-      this.url.concat(MatchesService.paginate(limit, offset))
+      this.url.concat(paginate(limit, offset))
     ).pipe(
       map(({ body }) => {
         const matches = JSON.parse(body) as PaginatedList<Match>;

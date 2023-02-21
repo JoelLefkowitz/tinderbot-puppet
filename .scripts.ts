@@ -9,7 +9,7 @@ export default {
       secrets: "trufflehog3",
     }),
     format: "prettier . --write",
-    test: "jest --passWithNoTests",
+    test: "jest",
     build: "tsc",
   },
 };

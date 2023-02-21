@@ -1,5 +1,5 @@
 import { Bot } from "../models/bots.model";
-import { BrowserService } from "../clients/browser";
+import { BrowserService } from "../services/browser";
 import { Page } from "puppeteer";
 import { injectable } from "tsyringe";
 

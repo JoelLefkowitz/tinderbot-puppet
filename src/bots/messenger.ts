@@ -1,5 +1,5 @@
 import { Bot } from "../models/bots.model";
-import { BrowserService } from "../clients/browser";
+import { BrowserService } from "../services/browser";
 import { injectable } from "tsyringe";
 
 @injectable()

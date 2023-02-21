@@ -1,7 +1,7 @@
 import { Bot } from "../models/bots.model";
-import { BrowserService } from "../clients/browser";
+import { BrowserService } from "../services/browser";
 import { MatchPayload } from "../models/match.model";
-import { MatchesService } from "../clients/matches";
+import { MatchesService } from "../services/matches";
 import { Page } from "puppeteer";
 import { firstValueFrom } from "rxjs";
 import { injectable } from "tsyringe";
