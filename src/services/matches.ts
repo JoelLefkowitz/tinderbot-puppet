@@ -22,18 +22,16 @@ export class MatchesService {
       map(({ body }) => {
         const matches = JSON.parse(body) as PaginatedList<Match>;
         return matches.count;
-      })
+      }),
     );
   }
 
   list(limit?: number, offset?: number): Observable<Match[]> {
-    return RxHR.get<string>(
-      this.url.concat(paginate(limit, offset))
-    ).pipe(
+    return RxHR.get<string>(this.url.concat(paginate(limit, offset))).pipe(
       map(({ body }) => {
         const matches = JSON.parse(body) as PaginatedList<Match>;
         return matches.results;
-      })
+      }),
     );
   }
 

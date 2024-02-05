@@ -11,13 +11,13 @@ export class Messenger implements Bot {
     messagesTab: "#messages-tab",
     firstNewMatch:
       // cspell:disable-next-line
-      "#matchListNoMessages > div:nth-child(1) > div:nth-child(3) > a > div.recCard__img.StretchedBox.Bdrs\\(4px\\).Ov\\(h\\).H\\(100\\%\\).Pos\\(r\\).Bgc\\(\\$c-placeholder\\) > div", 
+      "#matchListNoMessages > div:nth-child(1) > div:nth-child(3) > a > div.recCard__img.StretchedBox.Bdrs\\(4px\\).Ov\\(h\\).H\\(100\\%\\).Pos\\(r\\).Bgc\\(\\$c-placeholder\\) > div",
     firstNewMatchName:
       "#matchListNoMessages > div:nth-child(1) > div:nth-child(3) > a > span > div > div.Ell",
     chatText: "#chat-text-area",
     chatSend:
       // cspell:disable-next-line
-      "#content > div > div.App__body.H\\(100\\%\\).Pos\\(r\\).Z\\(0\\) > div > main > div.H\\(100\\%\\) > div > div > div > div.Fx\\(\\$flx1\\).H\\(100\\%\\) > div > div > div.D\\(f\\).W\\(100\\%\\).BdT.Bdtc\\(\\$c-divider\\).Bgc\\(\\#fff\\).Pos\\(r\\) > form > button", 
+      "#content > div > div.App__body.H\\(100\\%\\).Pos\\(r\\).Z\\(0\\) > div > main > div.H\\(100\\%\\) > div > div > div > div.Fx\\(\\$flx1\\).H\\(100\\%\\) > div > div > div.D\\(f\\).W\\(100\\%\\).BdT.Bdtc\\(\\$c-divider\\).Bgc\\(\\#fff\\).Pos\\(r\\) > form > button",
   };
 
   constructor(private browser: BrowserService) {}

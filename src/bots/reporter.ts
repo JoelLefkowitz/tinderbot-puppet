@@ -12,7 +12,7 @@ export class Reporter implements Bot {
 
   constructor(
     private browser: BrowserService,
-    private matches: MatchesService
+    private matches: MatchesService,
   ) {
     const host = process.env.remoteHost ?? "0.0.0.0";
     const port = process.env.remoteServerPort ?? "8000";
