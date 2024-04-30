@@ -1,6 +1,5 @@
-import puppeteer, { Browser } from "puppeteer";
-
 import { injectable } from "tsyringe";
+import puppeteer, { Browser } from "puppeteer";
 
 @injectable()
 export class BrowserService {

@@ -1,4 +1,4 @@
-import { Bot } from "../models/bots.model";
+import { Bot } from "../models/Bot.model";
 import { BrowserService } from "../services/browser";
 import { injectable } from "tsyringe";
 

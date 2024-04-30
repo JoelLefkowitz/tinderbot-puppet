@@ -1,0 +1,18 @@
+severity: low
+exclude:
+  - message: Giphy links
+    pattern: media\.giphy\.com
+
+  - message: Shield links
+    pattern: img\.shields\.io
+
+  - message: Dependencies
+    paths:
+      - node_modules
+
+  - message: Tooling outputs
+    paths:
+      - docs/dist
+      - package-lock.json
+      - yarn-error.log
+      - yarn.lock

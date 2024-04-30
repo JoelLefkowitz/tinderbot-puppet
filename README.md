@@ -5,6 +5,7 @@ Tinder Pupeteer scripts.
 ![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/tinderbot-puppet/review.yml)
 ![Version](https://img.shields.io/npm/v/tinderbot-puppet)
 ![Downloads](https://img.shields.io/npm/dw/tinderbot-puppet)
+![Size](https://img.shields.io/bundlephobia/min/tinderbot-puppet)
 ![Quality](https://img.shields.io/codacy/grade/a73118d332724935930464a45c9da3cc)
 ![Coverage](https://img.shields.io/codacy/coverage/a73118d332724935930464a45c9da3cc)
 
@@ -58,6 +59,14 @@ node dist/main.js
 
 ## Tooling
 
+### Dependencies
+
+To install dependencies:
+
+```bash
+yarn install
+```
+
 ### Tests
 
 To run tests:
@@ -110,8 +119,8 @@ bump2version patch
 
 Lots of love to the open source community!
 
-<p align='center'>
+<div align='center'>
     <img width=200 height=200 src='https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif' alt='Be kind to your mind' />
     <img width=200 height=200 src='https://media.giphy.com/media/KEAAbQ5clGWJwuJuZB/giphy.gif' alt='Love each other' />
     <img width=200 height=200 src='https://media.giphy.com/media/WRWykrFkxJA6JJuTvc/giphy.gif' alt="It's ok to have a bad day" />
-</p>
+</div>

@@ -1,6 +1,6 @@
-import { Bot } from "../models/bots.model";
+import { Bot } from "../models/Bot.model";
 import { BrowserService } from "../services/browser";
-import { MatchPayload } from "../models/match.model";
+import { MatchPayload } from "../models/Match.model";
 import { MatchesService } from "../services/matches";
 import { Page } from "puppeteer";
 import { firstValueFrom } from "rxjs";

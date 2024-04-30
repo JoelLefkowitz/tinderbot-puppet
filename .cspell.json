@@ -1,33 +1,30 @@
 {
   "language": "en",
-  "ignorePaths": [
-    ".git",
-    ".gitignore",
-    ".husky",
-    "coverage",
-    "dist",
-    "yarn-error.log"
-  ],
   "dictionaries": [
+    "aws",
     "bash",
     "en-gb",
+    "fullstack",
     "misc",
-    "node",
-    "softwareTerms",
-    "typescript"
+    "softwareTerms"
   ],
+  "ignorePaths": [".git"],
   "words": [
     "akanass",
     "autofix",
     "bumpversion",
+    "cliui",
     "codacy",
+    "corepack",
     "csrftoken",
+    "giphy",
     "homescreen",
+    "jsdoc",
     "lefkowitz",
     "networkidle",
     "pupeteer",
-    "swiper",
     "tinderbot",
+    "trufflehog",
     "tsyringe"
   ]
 }

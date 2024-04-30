@@ -1,7 +1,6 @@
-import { Match, MatchPayload } from "../models/match.model";
-
+import { Match, MatchPayload } from "../models/Match.model";
 import { Observable } from "rxjs";
-import { PaginatedList } from "../models/paginated.model";
+import { PaginatedList } from "../models/PaginatedList.model";
 import { RxHR } from "@akanass/rx-http-request";
 import { injectable } from "tsyringe";
 import { map } from "rxjs/operators";
