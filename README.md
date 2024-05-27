@@ -11,7 +11,7 @@ Tinder Pupeteer scripts.
 
 ## Example
 
-![Example](docs/example.gif)
+![Example](docs/images/example.gif)
 
 ## Installing
 
