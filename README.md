@@ -48,7 +48,7 @@ git clone https://github.com/joellefkowitz/tinderbot-puppet
 Compile the package:
 
 ```bash
-npm run build
+yarn build
 ```
 
 Run the entrypoint:
@@ -72,7 +72,7 @@ yarn install
 To run tests:
 
 ```bash
-npm run test
+yarn test
 ```
 
 ### Documentation
@@ -80,7 +80,7 @@ npm run test
 To generate the documentation locally:
 
 ```bash
-npm run docs
+yarn docs
 ```
 
 ### Linters
@@ -88,7 +88,7 @@ npm run docs
 To run linters:
 
 ```bash
-npm run lint
+yarn lint
 ```
 
 ### Formatters
@@ -96,7 +96,7 @@ npm run lint
 To run formatters:
 
 ```bash
-npm run format
+yarn format
 ```
 
 ## Contributing
