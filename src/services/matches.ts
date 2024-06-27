@@ -1,7 +1,7 @@
 import { Match, MatchPayload } from "../models/Match.model";
 import { Observable } from "rxjs";
 import { PaginatedList } from "../models/PaginatedList.model";
-import { RxHR } from "@akanass/rx-http-request";
+import { RxHR as http } from "@akanass/rx-http-request";
 import { injectable } from "tsyringe";
 import { map } from "rxjs/operators";
 import { paginate } from "./pagination";
@@ -17,7 +17,7 @@ export class MatchesService {
   }
 
   count(): Observable<number> {
-    return RxHR.get<string>(this.url).pipe(
+    return http.get<string>(this.url).pipe(
       map(({ body }) => {
         const matches = JSON.parse(body) as PaginatedList<Match>;
         return matches.count;
@@ -26,7 +26,7 @@ export class MatchesService {
   }
 
   list(limit?: number, offset?: number): Observable<Match[]> {
-    return RxHR.get<string>(this.url.concat(paginate(limit, offset))).pipe(
+    return http.get<string>(this.url.concat(paginate(limit, offset))).pipe(
       map(({ body }) => {
         const matches = JSON.parse(body) as PaginatedList<Match>;
         return matches.results;
@@ -35,13 +35,12 @@ export class MatchesService {
   }
 
   create(match: MatchPayload, csrf: string): Observable<Match> {
-    return RxHR.post<Match>(this.url, {
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRFToken": csrf,
-      },
-      body: match,
-      json: true,
-    }).pipe(map(({ body }) => body));
+    return http
+      .post<Match>(this.url, {
+        headers: { "Content-Type": "application/json", "X-CSRFToken": csrf },
+        body: match,
+        json: true,
+      })
+      .pipe(map(({ body }) => body));
   }
 }
