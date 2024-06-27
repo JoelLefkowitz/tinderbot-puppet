@@ -22,6 +22,8 @@
     "jsdoc",
     "lefkowitz",
     "networkidle",
+    "pinst",
+    "postpack",
     "pupeteer",
     "tinderbot",
     "trufflehog",
