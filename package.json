@@ -1,7 +1,7 @@
 {
   "name": "tinderbot-puppet",
   "description": "Tinder Pupeteer scripts.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "MIT",
   "author": "Joel Lefkowitz",
   "repository": "https://github.com/joellefkowitz/tinderbot-puppet",
