@@ -2,7 +2,7 @@
 
 Tinder Pupeteer scripts.
 
-![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/tinderbot-puppet/review.yml)
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/tinderbot-puppet/review.yaml)
 ![Version](https://img.shields.io/npm/v/tinderbot-puppet)
 ![Downloads](https://img.shields.io/npm/dw/tinderbot-puppet)
 ![Size](https://img.shields.io/bundlephobia/min/tinderbot-puppet)
